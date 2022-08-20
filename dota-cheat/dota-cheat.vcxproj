@@ -16,6 +16,7 @@
     <ProjectGuid>{19d28e64-955f-4dcc-84ae-760e3f455af3}</ProjectGuid>
     <RootNamespace>dotacheat</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>dota-scalux</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -101,6 +102,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="core\helpers\clip.cpp" />
+    <ClCompile Include="core\helpers\clip_win.cpp" />
     <ClCompile Include="core\helpers\hash.cpp" />
     <ClCompile Include="core\helpers\input.cpp" />
     <ClCompile Include="core\helpers\interfaces.cpp" />
@@ -161,6 +164,8 @@
     <ClInclude Include="context\dota.hpp" />
     <ClInclude Include="context\mem.hpp" />
     <ClInclude Include="core\entities.hpp" />
+    <ClInclude Include="core\helpers\clip.h" />
+    <ClInclude Include="core\helpers\clip_lock_impl.h" />
     <ClInclude Include="core\helpers\hash.hpp" />
     <ClInclude Include="core\helpers\render.hpp" />
     <ClInclude Include="core\helpers\input.hpp" />
@@ -282,6 +287,8 @@
     <ClInclude Include="dependencies\freetype\include\ft2build.h" />
     <ClInclude Include="dependencies\imgui\backends\imgui_impl_dx11.h" />
     <ClInclude Include="dependencies\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="dependencies\imgui\customfont.h" />
+    <ClInclude Include="dependencies\imgui\customgui.h" />
     <ClInclude Include="dependencies\imgui\imconfig.h" />
     <ClInclude Include="dependencies\imgui\imgui.h" />
     <ClInclude Include="dependencies\imgui\imgui_internal.h" />

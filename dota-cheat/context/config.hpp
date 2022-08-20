@@ -2,6 +2,8 @@
 
 #include <optional>
 
+#include "..\core\types\color_t.hpp"
+
 namespace CTX
 {
 	struct Config_t
@@ -10,6 +12,8 @@ namespace CTX
 		{
 			bool m_bHighlighIllusions = false;
 			bool m_bVisibleByEnemy = false;
+
+			Color_t m_fIllusionCol = Color_t(255, 0, 0, 255);
 		} Visuals;
 	};
 

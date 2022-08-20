@@ -47,7 +47,7 @@ void CVisuals::OnRender( )
 
 void CVisuals::HighlightIllusions( C_DOTA_BaseNPC_Hero* pHero ) const
 {
-	static constexpr Color_t ILLUSIONS_COLOR = Color_t( 0, 0, 255, 255 );
+	static Color_t ILLUSIONS_COLOR = Color_t( CTX::Config->Visuals.m_fIllusionCol );
 
 	if ( pHero->GetReplicatingHeroHandle( ) == std::numeric_limits< CEntityHandle >::max( )
 		|| pHero->GetReplicatingHeroHandle( ) == 0 )
@@ -72,7 +72,7 @@ void CVisuals::HighlightIllusions( C_DOTA_BaseNPC_Hero* pHero ) const
 
 void CVisuals::VisibleByEnemy( ) const
 {
-	static constexpr Color_t VISIBLE_COLOR = Color_t( 255, 0, 0, 255 );
+	static Color_t VISIBLE_COLOR = Color_t( 255, 0, 0, 255 );
 
 	Color_t& clrRender = m_pLocalHero->GetRenderColor( );
 
